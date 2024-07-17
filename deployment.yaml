@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: lens-lounge-m
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: lens-lounge-m
+  template:
+    metadata:
+      labels:
+        app: lens-lounge-m
+    spec:
+      containers:
+        - name: lens-lounge-m  # <--- This is the name of the container
+          image: sergehall/lens-lounge-m
+          resources:
+            limits:
+              memory: "256Mi" # <--- This is the maximum amount of memory that the container can use
+              cpu: "250m"  # <--- This is the maximum amount of CPU that the container can use
+          ports:
+            - containerPort: 5000 # <--- This is the port that the container is listening on
+              protocol: TCP # <--- This is the protocol that the container is listening on
+      restartPolicy: Always
