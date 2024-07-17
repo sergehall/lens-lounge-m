@@ -7,6 +7,6 @@ spec:
     app: lens-lounge-m  # <--- This is the label that the service will select
   ports:
     - protocol: TCP
-      port: 3000  # <--- This is the port that the service will be listening on
-      targetPort: 5000 # <--- This is the port that the container is listening on
+      port: 5000  # <--- This is the port that the service will be listening on
+      targetPort: 3000 # <--- This is the port that the container is listening on
   type: LoadBalancer
