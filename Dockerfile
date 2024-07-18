@@ -6,11 +6,12 @@ WORKDIR /app
 # Expose port 5000 (adjusted to match containerPort in deployment)
 EXPOSE 5000
 
+COPY package.json yarn.lock ./
+
 # Install dependencies
 RUN yarn install
 
-# Copy the rest of the application code
-COPY . .
+COPY . ./
 
 # Command to run the application
 CMD ["yarn", "start"]

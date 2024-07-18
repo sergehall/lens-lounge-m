@@ -11,4 +11,14 @@ export class AppController {
   async getHello(): Promise<string> {
     return this.appService.getHello();
   }
+
+  @Get('/healthz')
+  getHealthz() {
+    return { status: 'ok' };
+  }
+
+  @Get('/ready')
+  getReady() {
+    return { status: 'ready' };
+  }
 }

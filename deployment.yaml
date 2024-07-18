@@ -13,14 +13,28 @@ spec:
         app: lens-lounge-m
     spec:
       containers:
-        - name: lens-lounge-m  # <--- This is the name of the container
+        - name: lens-lounge-m
           image: sergehall/lens-lounge-m
-
           resources:
+            requests:
+              memory: "128Mi"
+              cpu: "125m"
             limits:
-              memory: "256Mi" # <--- This is the maximum amount of memory that the container can use
-              cpu: "250m"  # <--- This is the maximum amount of CPU that the container can use
+              memory: "256Mi"
+              cpu: "250m"
           ports:
-            - containerPort: 3000 # <--- This is the port that the container is listening on
-              protocol: TCP # <--- This is the protocol that the container is listening on
+            - containerPort: 5000
+              protocol: TCP
+          livenessProbe:
+            httpGet:
+              path: /healthz
+              port: 5000
+            initialDelaySeconds: 30
+            periodSeconds: 10
+          readinessProbe:
+            httpGet:
+              path: /ready
+              port: 5000
+            initialDelaySeconds: 30
+            periodSeconds: 10
       restartPolicy: Always
