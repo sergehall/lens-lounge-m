@@ -23,18 +23,18 @@ spec:
               memory: "256Mi"
               cpu: "250m"
           ports:
-            - containerPort: 5000
+            - containerPort: 5001
               protocol: TCP
           livenessProbe:
             httpGet:
               path: /healthz
-              port: 5000
+              port: 5001
             initialDelaySeconds: 30
             periodSeconds: 10
           readinessProbe:
             httpGet:
               path: /ready
-              port: 5000
+              port: 5001
             initialDelaySeconds: 30
             periodSeconds: 10
       restartPolicy: Always
