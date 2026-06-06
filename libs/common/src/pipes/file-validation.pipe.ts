@@ -6,7 +6,7 @@ import {
   HttpStatus,
 } from '@nestjs/common';
 
-import * as sharp from 'sharp';
+import sharp from 'sharp';
 import { CustomErrorsMessagesType } from '../filters/types/custom-errors-messages.types';
 import { FileConstraintsDto } from './file-constraints/file-constraints.dto';
 import { FileUploadDto } from '../../../../apps/backend/src/features/blogger-blogs/dto/file-upload.dto';

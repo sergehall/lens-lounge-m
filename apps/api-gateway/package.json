@@ -4,12 +4,12 @@
   "description": "NestJS app by typeorm and postgresql DB. My first steps work with NodeJS, Express, NestJS, Swagger, MongoDB, PostgreSQL, Microservices, RabbitMQ, WebSocket, DevOps basics (docker + kubernetes + jenkins), SOLID, Hexagonal architecture, SAGA,front-end basics.",
   "author": "Serge Hall",
   "private": true,
-  "license": "It_Incubator",
-  "packageManager": "yarn@4.5.0",
+  "license": "MIT",
+  "packageManager": "yarn@4.14.1",
   "engines": {
-    "yarn": "4.5.0",
+    "yarn": "4.14.1",
     "npm": "10.8.3",
-    "node": "20.17.0"
+    "node": "24.15.0"
   },
   "scripts": {
     "build": "nest build",
@@ -26,17 +26,17 @@
     "test:e2e": "jest --config test/jest-e2e.json"
   },
   "dependencies": {
-    "@nestjs/common": "^10.4.4",
-    "@nestjs/core": "^10.4.1",
+    "@nestjs/common": "11.0.16",
+    "@nestjs/core": "11.1.18",
     "@nestjs/cqrs": "^10.2.7",
-    "@nestjs/microservices": "^10.4.1",
+    "@nestjs/microservices": "11.1.19",
     "@nestjs/platform-express": "^10.0.0",
     "amqp-connection-manager": "^4.1.14",
     "amqplib": "^0.10.4",
     "ioredis": "^5.4.1",
     "reflect-metadata": "^0.2.0",
     "rxjs": "^7.8.1",
-    "typeorm": "0.3.21-dev.e7649d2"
+    "typeorm": "0.3.26"
   },
   "devDependencies": {
     "@nestjs/cli": "^10.4.5",
@@ -60,6 +60,13 @@
     "ts-node": "^10.9.1",
     "tsconfig-paths": "^4.2.0",
     "typescript": "^5.5.4"
+  },
+  "resolutions": {
+    "flatted@npm:^3.2.9": "npm:3.4.2",
+    "form-data@npm:^4.0.0": "npm:4.0.4",
+    "sha.js@npm:^2.4.11": "npm:2.4.12",
+    "tar@npm:^6.1.11": "npm:7.5.11",
+    "tar@npm:^6.2.1": "npm:7.5.11"
   },
   "jest": {
     "moduleFileExtensions": [

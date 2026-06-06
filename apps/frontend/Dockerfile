@@ -1,12 +1,10 @@
 # Step 1: Build the React application
-FROM node:20 AS build
+FROM node:24.15.0 AS build
 
 # Set the working directory
 WORKDIR /app
 
-RUN npm i -g corepack
-
-RUN corepack prepare yarn@4.4.1 --activate
+RUN corepack enable && corepack prepare yarn@4.14.1 --activate
 
 # Install dependencies
 COPY package.json yarn.lock ./
