@@ -12,7 +12,7 @@ import { PostsEntity } from './posts.entity';
 import { LikeStatusEnums } from '../../../db/enums/like-status.enums';
 import { LikeStatusDto } from '../dto/like-status.dto';
 import { CurrentUserDto } from '../../users/dto/current-user.dto';
-import * as uuid4 from 'uuid4';
+import uuid4 from 'uuid4';
 
 @Entity('LikeStatusPosts')
 @Unique(['id'])

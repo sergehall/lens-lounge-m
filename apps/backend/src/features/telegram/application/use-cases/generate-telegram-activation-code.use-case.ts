@@ -9,9 +9,7 @@ export class GenerateTelegramActivationLinkCommand {
 }
 
 @CommandHandler(GenerateTelegramActivationLinkCommand)
-export class GenerateTelegramActivationLinkUseCase
-  implements ICommandHandler<GenerateTelegramActivationLinkCommand>
-{
+export class GenerateTelegramActivationLinkUseCase implements ICommandHandler<GenerateTelegramActivationLinkCommand> {
   constructor(private readonly telegramConfig: TelegramConfig) {}
   async execute(
     command: GenerateTelegramActivationLinkCommand,

@@ -1,0 +1,37 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  types-and-lint:
+    name: TypeScript and ESLint
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24.15.0
+          cache: yarn
+
+      - name: Enable Corepack
+        run: corepack enable
+
+      - name: Activate Yarn
+        run: corepack prepare yarn@4.14.1 --activate
+
+      - name: Install dependencies
+        run: yarn install --immutable
+
+      - name: Check types
+        run: yarn typecheck
+
+      - name: Lint
+        run: yarn lint:check

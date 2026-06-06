@@ -1,7 +1,7 @@
 import { Entity, Column, ManyToOne, JoinColumn, PrimaryColumn } from 'typeorm';
 import { UsersEntity } from '../../users/entities/users.entity';
 import { ConversationsEntity } from './conversations.entity';
-import * as uuid4 from 'uuid4';
+import uuid4 from 'uuid4';
 
 @Entity('Messages')
 export class MessagesEntity {

@@ -13,7 +13,7 @@ import { CommentsEntity } from '../../comments/entities/comments.entity';
 import { LikeStatusCommentsEntity } from '../../comments/entities/like-status-comments.entity';
 import { CreatePostDto } from '../dto/create-post.dto';
 import { CurrentUserDto } from '../../users/dto/current-user.dto';
-import * as uuid4 from 'uuid4';
+import uuid4 from 'uuid4';
 
 @Entity('Posts')
 @Unique(['id'])

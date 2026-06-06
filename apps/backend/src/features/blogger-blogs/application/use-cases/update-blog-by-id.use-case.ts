@@ -15,9 +15,7 @@ export class UpdateBlogByIdCommand {
   ) {}
 }
 @CommandHandler(UpdateBlogByIdCommand)
-export class UpdateBlogByIdUseCase
-  implements ICommandHandler<UpdateBlogByIdCommand>
-{
+export class UpdateBlogByIdUseCase implements ICommandHandler<UpdateBlogByIdCommand> {
   constructor(
     private readonly caslAbilityFactory: CaslAbilityFactory,
     private readonly bloggerBlogsRepo: BloggerBlogsRepo,

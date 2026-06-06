@@ -6,7 +6,7 @@ import { ChallengesQuestionsRepo } from '../../infrastructure/challenges-questio
 import { ChallengeAnswersEntity } from '../../entities/challenge-answers.entity';
 import { UsersEntity } from '../../../users/entities/users.entity';
 import { QuestionsQuizEntity } from '../../../sa-quiz-questions/entities/questions-quiz.entity';
-import * as uuid4 from 'uuid4';
+import uuid4 from 'uuid4';
 import { AnswerStatusEnum } from '../../enums/answer-status.enum';
 import { GameOverEvent } from '../../events/game-over.event';
 
@@ -18,9 +18,7 @@ export class FinishGameForAnotherUseCommand {
 }
 
 @CommandHandler(FinishGameForAnotherUseCommand)
-export class FinishGameForAnotherUserUseCase
-  implements ICommandHandler<FinishGameForAnotherUseCommand>
-{
+export class FinishGameForAnotherUserUseCase implements ICommandHandler<FinishGameForAnotherUseCommand> {
   constructor(
     protected challengesAnswersRepo: ChallengesAnswersRepo,
     protected challengesQuestionsRepo: ChallengesQuestionsRepo,

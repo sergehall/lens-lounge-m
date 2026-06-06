@@ -10,9 +10,7 @@ export class ConstructStripeEventCommand {
 }
 
 @CommandHandler(ConstructStripeEventCommand)
-export class ConstructStripeEventUseCase
-  implements ICommandHandler<ConstructStripeEventCommand>
-{
+export class ConstructStripeEventUseCase implements ICommandHandler<ConstructStripeEventCommand> {
   constructor(
     private readonly stripeConfig: StripeConfig,
     private readonly stripeFactory: StripeFactory,

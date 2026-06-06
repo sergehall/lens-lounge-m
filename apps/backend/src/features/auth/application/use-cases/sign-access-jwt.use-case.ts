@@ -1,4 +1,4 @@
-import * as uuid4 from 'uuid4';
+import uuid4 from 'uuid4';
 import { InternalServerErrorException } from '@nestjs/common';
 import { JwtService } from '@nestjs/jwt';
 import { CommandHandler, ICommandHandler } from '@nestjs/cqrs';
@@ -11,9 +11,7 @@ export class SignAccessJwtUseCommand {
 }
 
 @CommandHandler(SignAccessJwtUseCommand)
-export class SignAccessJwtUseCase
-  implements ICommandHandler<SignAccessJwtUseCommand>
-{
+export class SignAccessJwtUseCase implements ICommandHandler<SignAccessJwtUseCommand> {
   constructor(
     private jwtService: JwtService,
     private jwtConfig: JwtConfig,

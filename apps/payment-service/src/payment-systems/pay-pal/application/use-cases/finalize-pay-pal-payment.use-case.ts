@@ -8,9 +8,7 @@ export class FinalizePayPalPaymentCommand {
 }
 
 @CommandHandler(FinalizePayPalPaymentCommand)
-export class FinalizePayPalPaymentUseCase
-  implements ICommandHandler<FinalizePayPalPaymentCommand>
-{
+export class FinalizePayPalPaymentUseCase implements ICommandHandler<FinalizePayPalPaymentCommand> {
   constructor(
     private readonly paymentTransactionsRepo: PaymentTransactionsRepo,
   ) {}

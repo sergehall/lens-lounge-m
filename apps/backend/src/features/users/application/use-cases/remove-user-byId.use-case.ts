@@ -19,9 +19,7 @@ export class RemoveUserByIdCommand {
 }
 
 @CommandHandler(RemoveUserByIdCommand)
-export class RemoveUserByIdUseCase
-  implements ICommandHandler<RemoveUserByIdCommand>
-{
+export class RemoveUserByIdUseCase implements ICommandHandler<RemoveUserByIdCommand> {
   constructor(
     protected caslAbilityFactory: CaslAbilityFactory,
     protected usersRepo: UsersRepo,

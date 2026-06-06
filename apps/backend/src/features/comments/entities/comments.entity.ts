@@ -11,7 +11,7 @@ import { UsersEntity } from '../../users/entities/users.entity';
 import { PostsEntity } from '../../posts/entities/posts.entity';
 import { CurrentUserDto } from '../../users/dto/current-user.dto';
 import { CreateCommentDto } from '../dto/create-comment.dto';
-import * as uuid4 from 'uuid4';
+import uuid4 from 'uuid4';
 
 @Entity('Comments')
 @Unique(['id'])

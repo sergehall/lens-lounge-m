@@ -14,9 +14,7 @@ export class SaDeleteUserByUserIdCommand {
   ) {}
 }
 @CommandHandler(SaDeleteUserByUserIdCommand)
-export class SaDeleteUserByUserIdUseCase
-  implements ICommandHandler<SaDeleteUserByUserIdCommand>
-{
+export class SaDeleteUserByUserIdUseCase implements ICommandHandler<SaDeleteUserByUserIdCommand> {
   constructor(
     private readonly caslAbilityFactory: CaslAbilityFactory,
     private readonly usersRepo: UsersRepo,

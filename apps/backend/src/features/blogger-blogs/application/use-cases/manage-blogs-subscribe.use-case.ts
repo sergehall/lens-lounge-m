@@ -24,9 +24,7 @@ export class ManageBlogsSubscribeCommand {
 }
 
 @CommandHandler(ManageBlogsSubscribeCommand)
-export class ManageBlogsSubscribeUseCase
-  implements ICommandHandler<ManageBlogsSubscribeCommand>
-{
+export class ManageBlogsSubscribeUseCase implements ICommandHandler<ManageBlogsSubscribeCommand> {
   constructor(
     private readonly bloggerBlogsRepo: BloggerBlogsRepo,
     private readonly blogsSubscribersRepo: BlogsSubscribersRepo,

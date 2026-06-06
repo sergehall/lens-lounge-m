@@ -1,6 +1,6 @@
 import { SaUserViewModel } from '../../src/features/sa/views/sa-user-view-model';
 import { CreateUserDto } from '../../src/features/users/dto/create-user.dto';
-import * as request from 'supertest';
+import request from 'supertest';
 import {
   MockBlogData,
   MockConfirmedUser,

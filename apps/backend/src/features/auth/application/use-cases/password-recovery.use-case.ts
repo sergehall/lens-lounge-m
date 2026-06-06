@@ -1,5 +1,5 @@
 import { CommandHandler, EventBus, ICommandHandler } from '@nestjs/cqrs';
-import * as uuid4 from 'uuid4';
+import uuid4 from 'uuid4';
 import { UsersRepo } from '../../../users/infrastructure/users-repo';
 import { UsersEntity } from '../../../users/entities/users.entity';
 import { NotFoundException } from '@nestjs/common';
@@ -12,9 +12,7 @@ export class PasswordRecoveryCommand {
 }
 
 @CommandHandler(PasswordRecoveryCommand)
-export class PasswordRecoveryUseCase
-  implements ICommandHandler<PasswordRecoveryCommand>
-{
+export class PasswordRecoveryUseCase implements ICommandHandler<PasswordRecoveryCommand> {
   constructor(
     private readonly usersRepo: UsersRepo,
     private readonly eventBus: EventBus,

@@ -1,6 +1,5 @@
 import { INestApplication } from '@nestjs/common';
-import * as request from 'supertest';
-import { SaUserViewModel } from '../src/features/sa/views/sa-user-view-model';
+import request from 'supertest';
 import { getTestAppOptions } from './utilities/get-test-app.options';
 import TestUtils from './utilities/test.utils';
 import { BloggerBlogsWithImagesSubscribersViewModel } from '../src/features/blogger-blogs/views/blogger-blogs-with-images-subscribers.view-model';
@@ -10,8 +9,6 @@ import { MockCommentData } from './utilities/mock-test-data';
 describe('Comments Controller (e2e)', () => {
   let app: INestApplication;
   let server: any;
-  let createdValidUser: SaUserViewModel;
-  let confirmedUser: SaUserViewModel;
   let token: string;
   let blog: BloggerBlogsWithImagesSubscribersViewModel;
   let post: PostWithLikesImagesInfoViewModel;
@@ -22,8 +19,8 @@ describe('Comments Controller (e2e)', () => {
     app = testAppOptions.app;
     server = testAppOptions.server;
     const testUtils = new TestUtils();
-    createdValidUser = await testUtils.createTestUser(server);
-    confirmedUser = await testUtils.createTestConfirmedUser(server);
+    await testUtils.createTestUser(server);
+    await testUtils.createTestConfirmedUser(server);
     token = await testUtils.getAccessToken(server);
     blog = await testUtils.createBlog(server, token);
     post = await testUtils.createPost(blog.id, server, token);

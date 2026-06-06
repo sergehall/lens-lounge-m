@@ -12,9 +12,7 @@ export class ProcessTelegramWebhookMessagesCommand {
   constructor(public payloadTelegramMessage: PayloadTelegramMessageType) {}
 }
 @CommandHandler(ProcessTelegramWebhookMessagesCommand)
-export class ProcessTelegramWebhookMessagesUseCase
-  implements ICommandHandler<ProcessTelegramWebhookMessagesCommand>
-{
+export class ProcessTelegramWebhookMessagesUseCase implements ICommandHandler<ProcessTelegramWebhookMessagesCommand> {
   constructor(
     private readonly commandBus: CommandBus,
     private readonly telegramConfig: TelegramConfig,

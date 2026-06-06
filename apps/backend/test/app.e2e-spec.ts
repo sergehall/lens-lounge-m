@@ -1,5 +1,5 @@
 import { INestApplication } from '@nestjs/common';
-import * as request from 'supertest';
+import request from 'supertest';
 import { getTestAppOptions } from './utilities/get-test-app.options';
 
 describe('App Controller (e2e)', () => {

@@ -18,7 +18,7 @@ export class FileValidationPipe implements PipeTransform {
 
   async transform(
     value: any,
-    metadata: ArgumentMetadata,
+    _metadata: ArgumentMetadata,
   ): Promise<FileUploadDto> {
     const constraints: FileConstraintsDto = this.constraintsKey;
 
@@ -100,7 +100,7 @@ export class FileValidationPipe implements PipeTransform {
           file: 'file.dimensions',
         });
       }
-    } catch (error) {
+    } catch {
       throw new HttpException(
         { message: 'Error reading image metadata' },
         HttpStatus.BAD_REQUEST,

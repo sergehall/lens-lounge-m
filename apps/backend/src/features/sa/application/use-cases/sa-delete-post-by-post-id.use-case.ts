@@ -18,9 +18,7 @@ export class SaDeletePostByPostIdCommand {
 }
 
 @CommandHandler(SaDeletePostByPostIdCommand)
-export class SaDeletePostByPostIdUseCase
-  implements ICommandHandler<SaDeletePostByPostIdCommand>
-{
+export class SaDeletePostByPostIdUseCase implements ICommandHandler<SaDeletePostByPostIdCommand> {
   constructor(
     private readonly caslAbilityFactory: CaslAbilityFactory,
     private readonly postsRepo: PostsRepo,

@@ -10,9 +10,7 @@ export class MyGamesStatisticCommand {
 }
 
 @CommandHandler(MyGamesStatisticCommand)
-export class MyGamesStatisticUseCase
-  implements ICommandHandler<MyGamesStatisticCommand>
-{
+export class MyGamesStatisticUseCase implements ICommandHandler<MyGamesStatisticCommand> {
   constructor(protected pairsGameRepo: GamePairsRepo) {}
 
   async execute(

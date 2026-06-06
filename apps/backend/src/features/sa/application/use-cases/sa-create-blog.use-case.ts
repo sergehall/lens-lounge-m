@@ -19,9 +19,7 @@ export class SaCreateBlogCommand {
 }
 
 @CommandHandler(SaCreateBlogCommand)
-export class SaCreateBlogUseCase
-  implements ICommandHandler<SaCreateBlogCommand>
-{
+export class SaCreateBlogUseCase implements ICommandHandler<SaCreateBlogCommand> {
   constructor(
     private readonly caslAbilityFactory: CaslAbilityFactory,
     private readonly bloggerBlogsRepo: BloggerBlogsRepo,

@@ -13,9 +13,7 @@ export class GetCommentsByUserIdCommand {
 }
 
 @CommandHandler(GetCommentsByUserIdCommand)
-export class GetCommentsByUserIdUseCase
-  implements ICommandHandler<GetCommentsByUserIdCommand>
-{
+export class GetCommentsByUserIdUseCase implements ICommandHandler<GetCommentsByUserIdCommand> {
   constructor(
     protected commentsRepo: CommentsRepo,
     protected commandBus: CommandBus,

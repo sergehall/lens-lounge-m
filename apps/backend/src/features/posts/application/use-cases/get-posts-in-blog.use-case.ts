@@ -18,9 +18,7 @@ export class GetPostsInBlogCommand {
 }
 
 @CommandHandler(GetPostsInBlogCommand)
-export class GetPostsInBlogUseCase
-  implements ICommandHandler<GetPostsInBlogCommand>
-{
+export class GetPostsInBlogUseCase implements ICommandHandler<GetPostsInBlogCommand> {
   constructor(
     private readonly postsRepo: PostsRepo,
     private readonly postsService: PostsService,

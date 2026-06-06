@@ -19,9 +19,7 @@ export class DeleteCommentCommand {
 }
 
 @CommandHandler(DeleteCommentCommand)
-export class DeleteCommentUseCase
-  implements ICommandHandler<DeleteCommentCommand>
-{
+export class DeleteCommentUseCase implements ICommandHandler<DeleteCommentCommand> {
   constructor(
     protected commentsRepo: CommentsRepo,
     protected caslAbilityFactory: CaslAbilityFactory,

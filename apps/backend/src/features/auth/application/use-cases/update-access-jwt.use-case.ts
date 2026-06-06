@@ -9,9 +9,7 @@ export class UpdateAccessJwtCommand {
   constructor(public currentPayload: PayloadDto) {}
 }
 @CommandHandler(UpdateAccessJwtCommand)
-export class UpdateAccessJwtUseCase
-  implements ICommandHandler<UpdateAccessJwtCommand>
-{
+export class UpdateAccessJwtUseCase implements ICommandHandler<UpdateAccessJwtCommand> {
   constructor(
     private readonly jwtService: JwtService,
     private readonly jwtConfig: JwtConfig,

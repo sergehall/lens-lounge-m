@@ -48,7 +48,7 @@ export class InitializeS3Client {
    * @param bucketName Name of the S3 bucket.
    * @returns True if the bucket exists, false otherwise.
    */
-  async bucketExists(bucketName: string): Promise<boolean> {
+  async bucketExists(_bucketName: string): Promise<boolean> {
     try {
       // await this.s3Client.send(new HeadBucketCommand({ Bucket: bucketName }));
       return true;

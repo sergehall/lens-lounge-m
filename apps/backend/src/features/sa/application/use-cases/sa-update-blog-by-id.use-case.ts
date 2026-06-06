@@ -16,9 +16,7 @@ export class SaUpdateBlogByIdCommand {
 }
 
 @CommandHandler(SaUpdateBlogByIdCommand)
-export class SaUpdateBlogByIdUseCase
-  implements ICommandHandler<SaUpdateBlogByIdCommand>
-{
+export class SaUpdateBlogByIdUseCase implements ICommandHandler<SaUpdateBlogByIdCommand> {
   constructor(
     protected caslAbilityFactory: CaslAbilityFactory,
     protected bloggerBlogsRepo: BloggerBlogsRepo,

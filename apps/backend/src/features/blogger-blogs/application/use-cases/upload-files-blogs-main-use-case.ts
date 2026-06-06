@@ -29,9 +29,7 @@ export class UploadFilesBlogsMainCommand {
 }
 
 @CommandHandler(UploadFilesBlogsMainCommand)
-export class UploadFilesBlogsMainUseCase
-  implements ICommandHandler<UploadFilesBlogsMainCommand>
-{
+export class UploadFilesBlogsMainUseCase implements ICommandHandler<UploadFilesBlogsMainCommand> {
   constructor(
     protected caslAbilityFactory: CaslAbilityFactory,
     protected bloggerBlogsRepo: BloggerBlogsRepo,

@@ -60,7 +60,7 @@ export class MessagesService {
     return `This action returns a #${id} message`;
   }
 
-  async update(id: number, updateMessageDto: UpdateMessageDto) {
+  async update(id: number, _updateMessageDto: UpdateMessageDto) {
     return `This action updates a #${id} message`;
   }
 

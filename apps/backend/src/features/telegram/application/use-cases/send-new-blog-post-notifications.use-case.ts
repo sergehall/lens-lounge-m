@@ -17,9 +17,7 @@ export class SendNewBlogPostNotificationsCommand {
 }
 
 @CommandHandler(SendNewBlogPostNotificationsCommand)
-export class SendNewBlogPostNotificationsUseCase
-  implements ICommandHandler<SendNewBlogPostNotificationsCommand>
-{
+export class SendNewBlogPostNotificationsUseCase implements ICommandHandler<SendNewBlogPostNotificationsCommand> {
   constructor(
     private readonly blogsSubscribersRepo: BlogsSubscribersRepo,
     private readonly postgresConfig: PostgresConfig,

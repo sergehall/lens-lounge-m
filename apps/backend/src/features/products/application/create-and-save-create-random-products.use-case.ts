@@ -9,9 +9,7 @@ export class CreateAndSaveCreateRandomProductsCommand {
 
 @Injectable()
 @CommandHandler(CreateAndSaveCreateRandomProductsCommand)
-export class CreateAndSaveCreateRandomProductsUseCase
-  implements ICommandHandler<CreateAndSaveCreateRandomProductsCommand>
-{
+export class CreateAndSaveCreateRandomProductsUseCase implements ICommandHandler<CreateAndSaveCreateRandomProductsCommand> {
   constructor(
     private readonly commandBus: CommandBus,
     private readonly productsRepo: ProductsRepo,

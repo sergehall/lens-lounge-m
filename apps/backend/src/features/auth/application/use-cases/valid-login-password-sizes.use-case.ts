@@ -11,9 +11,7 @@ export class ValidLoginPasswordSizesCommand {
 }
 
 @CommandHandler(ValidLoginPasswordSizesCommand)
-export class ValidLoginPasswordSizesUseCase
-  implements ICommandHandler<ValidLoginPasswordSizesCommand>
-{
+export class ValidLoginPasswordSizesUseCase implements ICommandHandler<ValidLoginPasswordSizesCommand> {
   async execute(command: ValidLoginPasswordSizesCommand): Promise<void> {
     const { loginOrEmail, password } = command;
 

@@ -13,9 +13,7 @@ export class ValidLoginOrEmailPasswordCommand {
 }
 
 @CommandHandler(ValidLoginOrEmailPasswordCommand)
-export class ValidLoginOrEmailPasswordUseCase
-  implements ICommandHandler<ValidLoginOrEmailPasswordCommand>
-{
+export class ValidLoginOrEmailPasswordUseCase implements ICommandHandler<ValidLoginOrEmailPasswordCommand> {
   constructor(private readonly usersRepo: UsersRepo) {}
 
   async execute(

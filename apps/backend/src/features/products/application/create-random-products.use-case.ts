@@ -19,9 +19,7 @@ interface ProductData {
 
 @Injectable()
 @CommandHandler(CreateRandomProductCommand)
-export class CreateRandomProductsUseCase
-  implements ICommandHandler<CreateRandomProductCommand>
-{
+export class CreateRandomProductsUseCase implements ICommandHandler<CreateRandomProductCommand> {
   constructor() {}
 
   async execute(

@@ -1,4 +1,4 @@
-import * as uuid4 from 'uuid4';
+import uuid4 from 'uuid4';
 import { InternalServerErrorException } from '@nestjs/common';
 import { JwtService } from '@nestjs/jwt';
 import { CommandHandler, ICommandHandler } from '@nestjs/cqrs';
@@ -10,9 +10,7 @@ export class SignRefreshJwtCommand {
 }
 
 @CommandHandler(SignRefreshJwtCommand)
-export class SignRefreshJwtUseCase
-  implements ICommandHandler<SignRefreshJwtCommand>
-{
+export class SignRefreshJwtUseCase implements ICommandHandler<SignRefreshJwtCommand> {
   constructor(
     private jwtService: JwtService,
     private jwtConfig: JwtConfig,

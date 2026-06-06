@@ -6,7 +6,7 @@ import { AnswerStatusEnum } from '../enums/answer-status.enum';
 import { CurrentUserDto } from '../../users/dto/current-user.dto';
 import { QuestionsQuizEntity } from '../../sa-quiz-questions/entities/questions-quiz.entity';
 import { UsersEntity } from '../../users/entities/users.entity';
-import * as uuid4 from 'uuid4';
+import uuid4 from 'uuid4';
 import {
   InternalServerErrorException,
   NotFoundException,

@@ -3,9 +3,7 @@ import { MailsService } from '../application/mails.service';
 import { UpdatedConfirmationCodeByRecoveryCodeEvent } from '../../../apps/backend/src/features/auth/events/updated-confirmation-code-by-recovery-code.event';
 
 @EventsHandler(UpdatedConfirmationCodeByRecoveryCodeEvent)
-export class SendRecoveryCodeEventHandler
-  implements IEventHandler<UpdatedConfirmationCodeByRecoveryCodeEvent>
-{
+export class SendRecoveryCodeEventHandler implements IEventHandler<UpdatedConfirmationCodeByRecoveryCodeEvent> {
   constructor(protected mailsService: MailsService) {}
 
   async handle(

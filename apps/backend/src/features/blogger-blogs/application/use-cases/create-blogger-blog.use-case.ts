@@ -21,9 +21,7 @@ export class CreateBloggerBlogCommand {
 }
 
 @CommandHandler(CreateBloggerBlogCommand)
-export class CreateBloggerBlogUseCase
-  implements ICommandHandler<CreateBloggerBlogCommand>
-{
+export class CreateBloggerBlogUseCase implements ICommandHandler<CreateBloggerBlogCommand> {
   constructor(
     private readonly caslAbilityFactory: CaslAbilityFactory,
     private readonly bloggerBlogsService: BloggerBlogsService,

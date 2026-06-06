@@ -10,9 +10,7 @@ export class SaCreateQuestionsAndAnswerCommand {
 }
 
 @CommandHandler(SaCreateQuestionsAndAnswerCommand)
-export class SaCreateQuestionsAndAnswerUseCase
-  implements ICommandHandler<SaCreateQuestionsAndAnswerCommand>
-{
+export class SaCreateQuestionsAndAnswerUseCase implements ICommandHandler<SaCreateQuestionsAndAnswerCommand> {
   constructor(
     protected gameQuestionsRepo: GameQuestionsRepo,
     protected quizQuestionsService: SaQuizQuestionsService,

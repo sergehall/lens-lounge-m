@@ -8,9 +8,7 @@ export class SaDeleteQuestionByIdCommand {
 }
 
 @CommandHandler(SaDeleteQuestionByIdCommand)
-export class SaDeleteQuestionByIdUseCase
-  implements ICommandHandler<SaDeleteQuestionByIdCommand>
-{
+export class SaDeleteQuestionByIdUseCase implements ICommandHandler<SaDeleteQuestionByIdCommand> {
   constructor(private readonly gameQuestionsRepo: GameQuestionsRepo) {}
 
   async execute(command: SaDeleteQuestionByIdCommand): Promise<boolean> {

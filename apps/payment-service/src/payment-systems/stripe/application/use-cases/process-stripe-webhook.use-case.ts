@@ -11,9 +11,7 @@ export class ProcessStripeWebHookCommand {
 }
 
 @CommandHandler(ProcessStripeWebHookCommand)
-export class ProcessStripeWebHookUseCase
-  implements ICommandHandler<ProcessStripeWebHookCommand>
-{
+export class ProcessStripeWebHookUseCase implements ICommandHandler<ProcessStripeWebHookCommand> {
   constructor(private readonly commandBus: CommandBus) {}
 
   async execute(command: ProcessStripeWebHookCommand): Promise<boolean> {

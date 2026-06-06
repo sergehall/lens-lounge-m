@@ -17,9 +17,7 @@ export class CreateOrderAndPaymentTransactionsCommand {
 }
 
 @CommandHandler(CreateOrderAndPaymentTransactionsCommand)
-export class CreateOrderAndPaymentTransactionsUseCase
-  implements ICommandHandler<CreateOrderAndPaymentTransactionsCommand>
-{
+export class CreateOrderAndPaymentTransactionsUseCase implements ICommandHandler<CreateOrderAndPaymentTransactionsCommand> {
   constructor(
     private readonly paymentTransactionsRepo: PaymentTransactionsRepo,
     private readonly ordersRepo: OrdersRepo,

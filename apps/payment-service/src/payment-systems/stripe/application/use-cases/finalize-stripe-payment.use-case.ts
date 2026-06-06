@@ -9,9 +9,7 @@ export class FinalizeStripePaymentCommand {
 }
 
 @CommandHandler(FinalizeStripePaymentCommand)
-export class FinalizeStripePaymentUseCase
-  implements ICommandHandler<FinalizeStripePaymentCommand>
-{
+export class FinalizeStripePaymentUseCase implements ICommandHandler<FinalizeStripePaymentCommand> {
   constructor(
     private readonly paymentService: PaymentService,
     private readonly paymentTransactionsRepo: PaymentTransactionsRepo,

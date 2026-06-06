@@ -13,9 +13,7 @@ export class CreateUserCommand {
 }
 
 @CommandHandler(CreateUserCommand)
-export class CreateUserUseCase
-  implements ICommandHandler<RegistrationUserCommand>
-{
+export class CreateUserUseCase implements ICommandHandler<RegistrationUserCommand> {
   constructor(
     private readonly expirationDateCalculator: CalculatorExpirationDate,
     private readonly usersRepo: UsersRepo,

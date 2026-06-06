@@ -4,7 +4,7 @@ import { UsersEntity } from '../../users/entities/users.entity';
 import { FileUploadDto } from '../dto/file-upload.dto';
 import { UrlPathKeyEtagDto } from '../dto/url-pathKey-etag.dto';
 import { CurrentUserDto } from '../../users/dto/current-user.dto';
-import * as uuid4 from 'uuid4';
+import uuid4 from 'uuid4';
 
 @Entity('ImagesBlogsWallpaperMetadata')
 export class ImagesBlogsWallpaperMetadataEntity {

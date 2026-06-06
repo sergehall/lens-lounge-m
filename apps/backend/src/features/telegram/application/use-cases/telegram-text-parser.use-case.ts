@@ -8,9 +8,7 @@ export class TelegramTextParserCommand {
 }
 
 @CommandHandler(TelegramTextParserCommand)
-export class TelegramTextParserUseCase
-  implements ICommandHandler<TelegramTextParserCommand>
-{
+export class TelegramTextParserUseCase implements ICommandHandler<TelegramTextParserCommand> {
   async execute({
     payloadTelegramMessage,
   }: TelegramTextParserCommand): Promise<string> {

@@ -12,7 +12,7 @@ import { ChallengeQuestionsEntity } from './challenge-questions.entity';
 import { GamesResultsEnum } from '../enums/games-results.enum';
 import { ChallengeAnswersEntity } from './challenge-answers.entity';
 import { CurrentUserDto } from '../../users/dto/current-user.dto';
-import * as uuid4 from 'uuid4';
+import uuid4 from 'uuid4';
 import { PlayersResultDto } from '../dto/players-result.dto';
 
 @Entity('PairsGame')

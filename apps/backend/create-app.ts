@@ -4,7 +4,7 @@ import {
   ValidationPipe,
 } from '@nestjs/common';
 import { useContainer } from 'class-validator';
-import * as cookieParser from 'cookie-parser';
+import cookieParser from 'cookie-parser';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 import { AppModule } from './src/app.module';
 import { HttpExceptionResponseFilter } from '../../libs/common/src/filters/http-exception-response-filter';

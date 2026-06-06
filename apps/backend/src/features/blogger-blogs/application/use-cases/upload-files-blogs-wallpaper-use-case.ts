@@ -29,9 +29,7 @@ export class UploadFilesBlogWallpaperCommand {
 
 /** Command handler for the UploadImageBlogWallpaperCommand. */
 @CommandHandler(UploadFilesBlogWallpaperCommand)
-export class UploadFilesBlogsWallpaperUseCase
-  implements ICommandHandler<UploadFilesBlogWallpaperCommand>
-{
+export class UploadFilesBlogsWallpaperUseCase implements ICommandHandler<UploadFilesBlogWallpaperCommand> {
   constructor(
     protected caslAbilityFactory: CaslAbilityFactory,
     protected bloggerBlogsRepo: BloggerBlogsRepo,

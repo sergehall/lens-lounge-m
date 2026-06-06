@@ -12,9 +12,7 @@ export class SaUpdateQuestionsAndAnswerCommand {
 }
 
 @CommandHandler(SaUpdateQuestionsAndAnswerCommand)
-export class SaUpdateQuestionsAndAnswerUseCase
-  implements ICommandHandler<SaUpdateQuestionsAndAnswerCommand>
-{
+export class SaUpdateQuestionsAndAnswerUseCase implements ICommandHandler<SaUpdateQuestionsAndAnswerCommand> {
   constructor(private readonly gameQuestionsRepo: GameQuestionsRepo) {}
 
   async execute(command: SaUpdateQuestionsAndAnswerCommand): Promise<boolean> {

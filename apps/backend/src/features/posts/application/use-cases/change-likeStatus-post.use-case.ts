@@ -19,9 +19,7 @@ export class ChangeLikeStatusPostCommand {
 }
 
 @CommandHandler(ChangeLikeStatusPostCommand)
-export class ChangeLikeStatusPostUseCase
-  implements ICommandHandler<ChangeLikeStatusPostCommand>
-{
+export class ChangeLikeStatusPostUseCase implements ICommandHandler<ChangeLikeStatusPostCommand> {
   constructor(
     protected caslAbilityFactory: CaslAbilityFactory,
     protected likeStatusPostsRepo: LikeStatusPostsRepo,

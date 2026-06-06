@@ -13,9 +13,7 @@ export class ManageTelegramBotCommand {
 }
 
 @CommandHandler(ManageTelegramBotCommand)
-export class ManageTelegramBotUseCase
-  implements ICommandHandler<ManageTelegramBotCommand>
-{
+export class ManageTelegramBotUseCase implements ICommandHandler<ManageTelegramBotCommand> {
   constructor(
     protected usersRepo: UsersRepo,
     protected telegramBotStatusRepo: TelegramBotStatusRepo,

@@ -9,12 +9,10 @@ import { UsersEntity } from '../../../../apps/backend/src/features/users/entitie
 
 @ValidatorConstraint({ name: 'EmailAndLoginNotExistValidator', async: true })
 @Injectable()
-export class EmailAndLoginNotExistValidator
-  implements ValidatorConstraintInterface
-{
+export class EmailAndLoginNotExistValidator implements ValidatorConstraintInterface {
   constructor(private readonly usersRepo: UsersRepo) {}
 
-  async validate(value: any, args: ValidationArguments): Promise<boolean> {
+  async validate(value: any, _args: ValidationArguments): Promise<boolean> {
     if (!value) {
       return true; // Don't perform validation if value is not provided
     }

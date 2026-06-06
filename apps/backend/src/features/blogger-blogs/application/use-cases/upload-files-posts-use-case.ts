@@ -33,9 +33,7 @@ export class UploadFilesPostsCommand {
 
 /** Command handler for the UploadImageForPostCommand. */
 @CommandHandler(UploadFilesPostsCommand)
-export class UploadFilesPostsUseCase
-  implements ICommandHandler<UploadFilesPostsCommand>
-{
+export class UploadFilesPostsUseCase implements ICommandHandler<UploadFilesPostsCommand> {
   constructor(
     protected caslAbilityFactory: CaslAbilityFactory,
     protected postsRepo: PostsRepo,

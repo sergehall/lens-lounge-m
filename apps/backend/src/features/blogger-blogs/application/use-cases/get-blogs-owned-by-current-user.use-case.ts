@@ -15,9 +15,7 @@ export class GetBlogsOwnedByCurrentUserCommand {
 }
 
 @CommandHandler(GetBlogsOwnedByCurrentUserCommand)
-export class GetBlogsOwnedByCurrentUserUseCase
-  implements ICommandHandler<GetBlogsOwnedByCurrentUserCommand>
-{
+export class GetBlogsOwnedByCurrentUserUseCase implements ICommandHandler<GetBlogsOwnedByCurrentUserCommand> {
   constructor(
     protected commandBus: CommandBus,
     protected bloggerBlogsService: BloggerBlogsService,

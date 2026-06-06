@@ -34,7 +34,7 @@ export class SocketGateway {
   }
 
   @SubscribeMessage('message')
-  async handleMessage(client: Socket, payload: any): Promise<string> {
+  async handleMessage(_client: Socket, _payload: any): Promise<string> {
     return 'Hello from server!';
   }
 

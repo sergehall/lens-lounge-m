@@ -7,7 +7,7 @@ import { ImagesPostsMetadataEntity } from '../../../features/posts/dto/images-po
 import { UrlDto } from '../../../features/blogger-blogs/dto/url.dto';
 import { PathKeyBufferDto } from '../../../features/posts/dto/path-key-buffer.dto';
 import { InitializeS3Client } from '../../../config/aws/s3/initialize-s3-client';
-import * as sharp from 'sharp';
+import sharp from 'sharp';
 import { ImageWidthHeightSize } from './dto/image-width-height-size';
 import { ImageMetadata } from './dto/image-metadata';
 import { FileUploadDto } from '../../../features/blogger-blogs/dto/file-upload.dto';

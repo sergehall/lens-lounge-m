@@ -1,8 +1,6 @@
 import { NestFactory } from '@nestjs/core';
 import { ApiGatewayModule } from './api-gateway.module';
 import { Transport } from '@nestjs/microservices';
-import { ConfigService } from '@nestjs/config';
-import { ConfigType } from '../../backend/src/config/configuration';
 
 async function bootstrap() {
   const app = await NestFactory.create(ApiGatewayModule);

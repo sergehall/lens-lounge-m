@@ -22,9 +22,7 @@ export class DeletePostByPostIdAndBlogIdCommand {
 }
 
 @CommandHandler(DeletePostByPostIdAndBlogIdCommand)
-export class DeletePostByPostIdAndBlogIdUseCase
-  implements ICommandHandler<DeletePostByPostIdAndBlogIdCommand>
-{
+export class DeletePostByPostIdAndBlogIdUseCase implements ICommandHandler<DeletePostByPostIdAndBlogIdCommand> {
   constructor(
     private readonly caslAbilityFactory: CaslAbilityFactory,
     private readonly bloggerBlogsRepo: BloggerBlogsRepo,

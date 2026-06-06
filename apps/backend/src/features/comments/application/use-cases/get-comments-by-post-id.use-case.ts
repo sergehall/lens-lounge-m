@@ -16,9 +16,7 @@ export class GetCommentsByPostIdCommand {
 }
 
 @CommandHandler(GetCommentsByPostIdCommand)
-export class GetCommentsByPostIdUseCase
-  implements ICommandHandler<GetCommentsByPostIdCommand>
-{
+export class GetCommentsByPostIdUseCase implements ICommandHandler<GetCommentsByPostIdCommand> {
   constructor(
     private readonly postsRepo: PostsRepo,
     private readonly commentsRepo: CommentsRepo,

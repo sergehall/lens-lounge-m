@@ -9,9 +9,7 @@ export class PayPalGenerateAccessTokenCommand {
 }
 
 @CommandHandler(PayPalGenerateAccessTokenCommand)
-export class PayPalGenerateAccessTokenUseCase
-  implements ICommandHandler<PayPalGenerateAccessTokenCommand>
-{
+export class PayPalGenerateAccessTokenUseCase implements ICommandHandler<PayPalGenerateAccessTokenCommand> {
   constructor(private readonly payPalConfig: PayPalConfig) {}
 
   async execute(): Promise<string> {

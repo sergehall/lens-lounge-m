@@ -10,9 +10,7 @@ export class SendOurWebhookToTelegramCommand {
 }
 
 @CommandHandler(SendOurWebhookToTelegramCommand)
-export class SendOurWebhookToTelegramUseCase
-  implements ICommandHandler<SendOurWebhookToTelegramCommand>
-{
+export class SendOurWebhookToTelegramUseCase implements ICommandHandler<SendOurWebhookToTelegramCommand> {
   constructor(
     private readonly postgresConfig: PostgresConfig,
     private readonly telegramConfig: TelegramConfig,

@@ -33,9 +33,7 @@ export class SubmitAnswerCommand {
 }
 
 @CommandHandler(SubmitAnswerCommand)
-export class SubmitAnswerForCurrentQuestionUseCase
-  implements ICommandHandler<SubmitAnswerCommand>
-{
+export class SubmitAnswerForCurrentQuestionUseCase implements ICommandHandler<SubmitAnswerCommand> {
   constructor(
     protected gameQuizRepo: GamePairsRepo,
     protected gameQuestionsRepo: GameQuestionsRepo,

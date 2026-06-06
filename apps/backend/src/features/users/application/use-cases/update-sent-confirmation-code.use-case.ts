@@ -10,9 +10,7 @@ export class UpdateSentConfirmationCodeCommand {
   constructor(public email: string) {}
 }
 @CommandHandler(UpdateSentConfirmationCodeCommand)
-export class UpdateSentConfirmationCodeUseCase
-  implements ICommandHandler<UpdateSentConfirmationCodeCommand>
-{
+export class UpdateSentConfirmationCodeUseCase implements ICommandHandler<UpdateSentConfirmationCodeCommand> {
   constructor(
     private readonly usersRepo: UsersRepo,
     private readonly eventBus: EventBus,

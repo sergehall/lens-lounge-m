@@ -15,7 +15,7 @@ export class AppGateway implements OnGatewayInit {
 
   constructor(private readonly rabbitMQService: RabbitMQService) {}
 
-  afterInit(server: Server) {
+  afterInit(_server: Server) {
     console.log('WebSocket server initialized');
   }
 

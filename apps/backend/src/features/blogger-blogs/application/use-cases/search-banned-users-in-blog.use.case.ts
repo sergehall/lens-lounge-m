@@ -21,9 +21,7 @@ export class SearchBannedUsersInBlogCommand {
 }
 
 @CommandHandler(SearchBannedUsersInBlogCommand)
-export class SearchBannedUsersInBlogUseCase
-  implements ICommandHandler<SearchBannedUsersInBlogCommand>
-{
+export class SearchBannedUsersInBlogUseCase implements ICommandHandler<SearchBannedUsersInBlogCommand> {
   constructor(
     protected caslAbilityFactory: CaslAbilityFactory,
     protected bloggerBlogsRepo: BloggerBlogsRepo,

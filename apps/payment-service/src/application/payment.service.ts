@@ -1,6 +1,6 @@
 import { Injectable, InternalServerErrorException } from '@nestjs/common';
 import { PaymentDto } from '../dto/payment.dto';
-import * as uuid4 from 'uuid4';
+import uuid4 from 'uuid4';
 import { PaymentSystem } from '../enums/payment-system.enums';
 import { ProductRequest } from '../../../backend/src/features/products/dto/products-request.dto';
 import { ProductsDataEntity } from '../../../backend/src/features/products/entities/products-data.entity';

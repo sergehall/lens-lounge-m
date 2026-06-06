@@ -11,9 +11,7 @@ export class PayPalCapturePaymentCommand {
 }
 
 @CommandHandler(PayPalCapturePaymentCommand)
-export class PayPalCapturePaymentUseCase
-  implements ICommandHandler<PayPalCapturePaymentCommand>
-{
+export class PayPalCapturePaymentUseCase implements ICommandHandler<PayPalCapturePaymentCommand> {
   constructor(
     private readonly commandBus: CommandBus,
     private readonly paymentService: PaymentService,

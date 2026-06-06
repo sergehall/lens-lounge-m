@@ -9,9 +9,7 @@ import { ExpirationDateDto } from '../../../../../../../libs/common/src/helpers/
 export class CreateSaUserCommand {}
 
 @CommandHandler(CreateSaUserCommand)
-export class CreateSaUserUseCase
-  implements ICommandHandler<CreateSaUserCommand>
-{
+export class CreateSaUserUseCase implements ICommandHandler<CreateSaUserCommand> {
   constructor(
     private readonly saConfig: SaConfig,
     private readonly usersRepo: UsersRepo,

@@ -13,7 +13,7 @@ export class JwtAuthAndActiveGameGuard extends AuthGuard('jwt-active-game') {
     return super.canActivate(context);
   }
 
-  handleRequest(err: any, user: any, info: any, context: ExecutionContext) {
+  handleRequest(err: any, user: any, _info: any, _context: ExecutionContext) {
     if (err || !user) {
       throw (
         err ||

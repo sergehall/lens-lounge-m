@@ -23,9 +23,7 @@ export class SaBanUnbanBlogCommand {
 }
 
 @CommandHandler(SaBanUnbanBlogCommand)
-export class SaBanUnbanBlogUseCase
-  implements ICommandHandler<SaBanUnbanBlogCommand>
-{
+export class SaBanUnbanBlogUseCase implements ICommandHandler<SaBanUnbanBlogCommand> {
   constructor(
     private readonly caslAbilityFactory: CaslAbilityFactory,
     private readonly bloggerBlogsRepo: BloggerBlogsRepo,

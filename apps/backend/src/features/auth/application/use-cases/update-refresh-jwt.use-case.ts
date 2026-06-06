@@ -10,9 +10,7 @@ export class UpdateRefreshJwtCommand {
 }
 
 @CommandHandler(UpdateRefreshJwtCommand)
-export class UpdateRefreshJwtUseCase
-  implements ICommandHandler<UpdateRefreshJwtCommand>
-{
+export class UpdateRefreshJwtUseCase implements ICommandHandler<UpdateRefreshJwtCommand> {
   constructor(
     private jwtService: JwtService,
     private jwtConfig: JwtConfig,

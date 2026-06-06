@@ -18,9 +18,7 @@ export class PlayerAnswersAllQuestionsCommand {
 }
 
 @CommandHandler(PlayerAnswersAllQuestionsCommand)
-export class PlayerAnswersAllQuestionsUseCase
-  implements ICommandHandler<PlayerAnswersAllQuestionsCommand>
-{
+export class PlayerAnswersAllQuestionsUseCase implements ICommandHandler<PlayerAnswersAllQuestionsCommand> {
   constructor(
     protected gamePairsRepo: GamePairsRepo,
     protected commandBus: CommandBus,

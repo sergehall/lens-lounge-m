@@ -24,9 +24,7 @@ export class UpdatePostByPostIdCommand {
 }
 
 @CommandHandler(UpdatePostByPostIdCommand)
-export class UpdatePostByPostIdUseCase
-  implements ICommandHandler<UpdatePostByPostIdCommand>
-{
+export class UpdatePostByPostIdUseCase implements ICommandHandler<UpdatePostByPostIdCommand> {
   constructor(
     protected caslAbilityFactory: CaslAbilityFactory,
     protected postsRepo: PostsRepo,

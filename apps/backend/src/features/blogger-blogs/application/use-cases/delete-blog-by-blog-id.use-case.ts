@@ -16,9 +16,7 @@ export class DeleteBlogByBlogIdCommand {
 }
 
 @CommandHandler(DeleteBlogByBlogIdCommand)
-export class DeleteBlogByBlogIdUseCase
-  implements ICommandHandler<DeleteBlogByBlogIdCommand>
-{
+export class DeleteBlogByBlogIdUseCase implements ICommandHandler<DeleteBlogByBlogIdCommand> {
   constructor(
     private readonly caslAbilityFactory: CaslAbilityFactory,
     private readonly bloggerBlogsRepo: BloggerBlogsRepo,

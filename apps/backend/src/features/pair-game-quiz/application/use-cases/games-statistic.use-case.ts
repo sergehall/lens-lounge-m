@@ -14,9 +14,7 @@ export class GamesStatisticCommand {
 }
 
 @CommandHandler(GamesStatisticCommand)
-export class GamesStatisticUseCase
-  implements ICommandHandler<GamesStatisticCommand>
-{
+export class GamesStatisticUseCase implements ICommandHandler<GamesStatisticCommand> {
   constructor(protected pairsGameRepo: GamePairsRepo) {}
 
   async execute(command: GamesStatisticCommand): Promise<PaginatorDto> {

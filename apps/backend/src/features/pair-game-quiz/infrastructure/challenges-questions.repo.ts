@@ -3,7 +3,7 @@ import { ChallengeQuestionsEntity } from '../entities/challenge-questions.entity
 import { Repository } from 'typeorm';
 import { InternalServerErrorException } from '@nestjs/common';
 import { QuestionsQuizEntity } from '../../sa-quiz-questions/entities/questions-quiz.entity';
-import * as uuid4 from 'uuid4';
+import uuid4 from 'uuid4';
 import { GameQuestionsRepo } from './game-questions.repo';
 import { PairsGameEntity } from '../entities/pairs-game.entity';
 

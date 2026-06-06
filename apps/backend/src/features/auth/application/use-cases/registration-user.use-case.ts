@@ -15,9 +15,7 @@ export class RegistrationUserCommand {
 }
 
 @CommandHandler(RegistrationUserCommand)
-export class RegistrationUserUseCase
-  implements ICommandHandler<RegistrationUserCommand>
-{
+export class RegistrationUserUseCase implements ICommandHandler<RegistrationUserCommand> {
   constructor(
     protected commandBus: CommandBus,
     protected eventBus: EventBus,

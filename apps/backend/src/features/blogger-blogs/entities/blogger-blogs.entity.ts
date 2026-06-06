@@ -11,7 +11,7 @@ import { CommentsEntity } from '../../comments/entities/comments.entity';
 import { UsersEntity } from '../../users/entities/users.entity';
 import { PostsEntity } from '../../posts/entities/posts.entity';
 import { BannedUsersForBlogsEntity } from '../../users/entities/banned-users-for-blogs.entity';
-import * as uuid4 from 'uuid4';
+import uuid4 from 'uuid4';
 import { CreateBlogsDto } from '../dto/create-blogs.dto';
 import { CurrentUserDto } from '../../users/dto/current-user.dto';
 

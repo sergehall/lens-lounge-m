@@ -21,9 +21,7 @@ export class UpdateCommentCommand {
 }
 
 @CommandHandler(UpdateCommentCommand)
-export class UpdateCommentUseCase
-  implements ICommandHandler<UpdateCommentCommand>
-{
+export class UpdateCommentUseCase implements ICommandHandler<UpdateCommentCommand> {
   constructor(
     protected caslAbilityFactory: CaslAbilityFactory,
     protected commentsRepo: CommentsRepo,
@@ -31,9 +29,8 @@ export class UpdateCommentUseCase
   async execute(command: UpdateCommentCommand): Promise<boolean> {
     const { commentId, updateCommentDto, currentUserDto } = command;
 
-    const findComment = await this.commentsRepo.getCommentByIdWithoutLikes(
-      commentId,
-    );
+    const findComment =
+      await this.commentsRepo.getCommentByIdWithoutLikes(commentId);
     if (!findComment)
       throw new NotFoundException(`Comment with ID ${commentId} not found`);
 

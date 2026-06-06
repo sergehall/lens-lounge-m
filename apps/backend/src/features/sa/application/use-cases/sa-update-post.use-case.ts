@@ -20,9 +20,7 @@ export class SaUpdatePostsByPostIdCommand {
 }
 
 @CommandHandler(SaUpdatePostsByPostIdCommand)
-export class SaUpdatePostsByPostIdUseCase
-  implements ICommandHandler<SaUpdatePostsByPostIdCommand>
-{
+export class SaUpdatePostsByPostIdUseCase implements ICommandHandler<SaUpdatePostsByPostIdCommand> {
   constructor(
     private readonly postsRepo: PostsRepo,
     private readonly bloggerBlogsRepo: BloggerBlogsRepo,

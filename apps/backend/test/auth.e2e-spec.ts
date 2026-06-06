@@ -1,5 +1,5 @@
 import { INestApplication } from '@nestjs/common';
-import * as request from 'supertest';
+import request from 'supertest';
 import { SaUserViewModel } from '../src/features/sa/views/sa-user-view-model';
 import TestUtils from './utilities/test.utils';
 import { getTestAppOptions } from './utilities/get-test-app.options';

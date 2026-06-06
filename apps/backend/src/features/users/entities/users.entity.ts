@@ -11,7 +11,7 @@ import { BannedUsersForBlogsEntity } from './banned-users-for-blogs.entity';
 import { PairsGameEntity } from '../../pair-game-quiz/entities/pairs-game.entity';
 import { ChallengeAnswersEntity } from '../../pair-game-quiz/entities/challenge-answers.entity';
 import { DataForCreateUserDto } from '../dto/data-for-create-user.dto';
-import * as uuid4 from 'uuid4';
+import uuid4 from 'uuid4';
 import { ApiProperty } from '@nestjs/swagger';
 import { MessagesEntity } from '../../messages/entities/messages.entity';
 import { ConversationsEntity } from '../../messages/entities/conversations.entity';

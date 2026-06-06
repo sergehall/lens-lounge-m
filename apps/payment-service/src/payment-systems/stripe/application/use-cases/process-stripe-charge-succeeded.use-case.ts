@@ -9,9 +9,7 @@ export class ProcessChargeSucceededCommand {
 }
 
 @CommandHandler(ProcessChargeSucceededCommand)
-export class ProcessStripeChargeSucceededUseCase
-  implements ICommandHandler<ProcessChargeSucceededCommand>
-{
+export class ProcessStripeChargeSucceededUseCase implements ICommandHandler<ProcessChargeSucceededCommand> {
   constructor(
     private readonly commandBus: CommandBus,
     private readonly paymentTransactionsRepo: PaymentTransactionsRepo,

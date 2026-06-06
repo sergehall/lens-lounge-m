@@ -18,9 +18,7 @@ export class SaBindBlogWithUserCommand {
 }
 
 @CommandHandler(SaBindBlogWithUserCommand)
-export class SaBindBlogWithUserUseCase
-  implements ICommandHandler<SaBindBlogWithUserCommand>
-{
+export class SaBindBlogWithUserUseCase implements ICommandHandler<SaBindBlogWithUserCommand> {
   constructor(
     private readonly caslAbilityFactory: CaslAbilityFactory,
     private readonly bloggerBlogsRepo: BloggerBlogsRepo,

@@ -26,9 +26,7 @@ export class ManageBlogAccessCommand {
 }
 
 @CommandHandler(ManageBlogAccessCommand)
-export class ManageBlogAccessUseCase
-  implements ICommandHandler<ManageBlogAccessCommand>
-{
+export class ManageBlogAccessUseCase implements ICommandHandler<ManageBlogAccessCommand> {
   constructor(
     private readonly caslAbilityFactory: CaslAbilityFactory,
     private readonly bloggerBlogsRepo: BloggerBlogsRepo,

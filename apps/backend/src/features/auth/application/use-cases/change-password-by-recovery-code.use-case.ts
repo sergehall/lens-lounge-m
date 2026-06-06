@@ -8,9 +8,7 @@ export class ChangePasswordByRecoveryCodeCommand {
 }
 
 @CommandHandler(ChangePasswordByRecoveryCodeCommand)
-export class ChangePasswordByRecoveryCodeUseCase
-  implements ICommandHandler<ChangePasswordByRecoveryCodeCommand>
-{
+export class ChangePasswordByRecoveryCodeUseCase implements ICommandHandler<ChangePasswordByRecoveryCodeCommand> {
   constructor(
     protected usersRepo: UsersRepo,
     protected encryptConfig: EncryptConfig,

@@ -9,9 +9,7 @@ export class ProcessPayPalWebhookCommand {
 }
 
 @CommandHandler(ProcessPayPalWebhookCommand)
-export class ProcessPayPalWebhookUseCase
-  implements ICommandHandler<ProcessPayPalWebhookCommand>
-{
+export class ProcessPayPalWebhookUseCase implements ICommandHandler<ProcessPayPalWebhookCommand> {
   constructor(private readonly commandBus: CommandBus) {}
 
   async execute(command: ProcessPayPalWebhookCommand): Promise<boolean> {

@@ -19,9 +19,7 @@ export class MyCurrentGameCommand {
 }
 
 @CommandHandler(MyCurrentGameCommand)
-export class MyCurrentGameUseCase
-  implements ICommandHandler<MyCurrentGameCommand>
-{
+export class MyCurrentGameUseCase implements ICommandHandler<MyCurrentGameCommand> {
   constructor(
     protected pairsGameRepo: GamePairsRepo,
     protected mapPairGame: MapPairGame,

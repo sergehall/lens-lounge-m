@@ -24,9 +24,7 @@ export class SaBanUnbanUserCommand {
 }
 
 @CommandHandler(SaBanUnbanUserCommand)
-export class SaBanUnbanUserUseCase
-  implements ICommandHandler<SaBanUnbanUserCommand>
-{
+export class SaBanUnbanUserUseCase implements ICommandHandler<SaBanUnbanUserCommand> {
   constructor(
     protected caslAbilityFactory: CaslAbilityFactory,
     protected usersRepo: UsersRepo,

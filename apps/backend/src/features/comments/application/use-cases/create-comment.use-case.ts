@@ -18,9 +18,7 @@ export class CreateCommentCommand {
 }
 
 @CommandHandler(CreateCommentCommand)
-export class CreateCommentUseCase
-  implements ICommandHandler<CreateCommentCommand>
-{
+export class CreateCommentUseCase implements ICommandHandler<CreateCommentCommand> {
   constructor(
     protected postsRepo: PostsRepo,
     protected commentsRepo: CommentsRepo,

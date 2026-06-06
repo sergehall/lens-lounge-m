@@ -13,9 +13,7 @@ export class AddResultToPairGameCommand {
 }
 
 @CommandHandler(AddResultToPairGameCommand)
-export class AddResultToPairGameUseCase
-  implements ICommandHandler<AddResultToPairGameCommand>
-{
+export class AddResultToPairGameUseCase implements ICommandHandler<AddResultToPairGameCommand> {
   constructor(
     protected gameQuizRepo: GamePairsRepo,
     protected pairGameQuizService: PairGameQuizService,
@@ -63,14 +61,14 @@ export class AddResultToPairGameUseCase
         firstPlayerCountCorrectAnswer === secondPlayerCountCorrectAnswer
           ? GamesResultsEnum.DRAW
           : firstPlayerCountCorrectAnswer > secondPlayerCountCorrectAnswer
-          ? GamesResultsEnum.WON
-          : GamesResultsEnum.LOST,
+            ? GamesResultsEnum.WON
+            : GamesResultsEnum.LOST,
       secondPlayer:
         firstPlayerCountCorrectAnswer === secondPlayerCountCorrectAnswer
           ? GamesResultsEnum.DRAW
           : firstPlayerCountCorrectAnswer > secondPlayerCountCorrectAnswer
-          ? GamesResultsEnum.LOST
-          : GamesResultsEnum.WON,
+            ? GamesResultsEnum.LOST
+            : GamesResultsEnum.WON,
     };
   }
 }

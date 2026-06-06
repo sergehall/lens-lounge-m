@@ -45,7 +45,7 @@ export class MessagesRepo {
   async findAll() {
     try {
       return 'This action returns all messages';
-    } catch (error) {
+    } catch {
       // Handle errors
       throw new Error('Failed to fetch messages');
     }
@@ -54,16 +54,16 @@ export class MessagesRepo {
   async findOne(id: string): Promise<string> {
     try {
       return `This action returns a #${id} message`;
-    } catch (error) {
+    } catch {
       // Handle errors
       throw new Error(`Failed to fetch message with id ${id}`);
     }
   }
 
-  async update(id: string, updateMessageDto: CreateMessageDto) {
+  async update(id: string, _updateMessageDto: CreateMessageDto) {
     try {
       return `This action updates a #${id} message`;
-    } catch (error) {
+    } catch {
       // Handle errors
       throw new Error(`Failed to update message with id ${id}`);
     }
@@ -72,7 +72,7 @@ export class MessagesRepo {
   async remove(id: string): Promise<string> {
     try {
       return `This action removes a #${id} message`;
-    } catch (error) {
+    } catch {
       // Handle errors
       throw new Error(`Failed to remove message with id ${id}`);
     }
