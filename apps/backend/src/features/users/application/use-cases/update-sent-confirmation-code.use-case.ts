@@ -1,4 +1,4 @@
-import * as uuid4 from 'uuid4';
+import uuid4 from 'uuid4';
 import { CommandHandler, EventBus, ICommandHandler } from '@nestjs/cqrs';
 import { UsersRepo } from '../../infrastructure/users-repo';
 import { UsersEntity } from '../../entities/users.entity';

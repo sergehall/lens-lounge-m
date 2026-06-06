@@ -1,75 +1,135 @@
-<p align="center">
-  <a href="https://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
+# Lens Lounge Microservices
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+Minimal learning project built with NestJS, React, PostgreSQL, RabbitMQ-style microservice patterns, and Docker.
 
-  <p align="center">A progressive <a href="https://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+The repository contains a root NestJS workspace plus standalone app folders:
 
-## Description
+- `apps/api-gateway` - API gateway service
+- `apps/backend` - main backend service
+- `apps/payment-service` - payment service
+- `apps/frontend` - React frontend
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+## Runtime
 
-## Installation
+Use the same versions locally and in Docker:
 
-```bash
-$ npm install
+```text
+Node.js: 24.15.0
+Yarn: 4.14.1
+npm: 10.8.3
 ```
 
-## Running the app
+Corepack should be enabled before installing dependencies:
 
 ```bash
-# development
-$ npm run start
-
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
+corepack enable
+corepack prepare yarn@4.14.1 --activate
+yarn --version
 ```
 
-## Test
+## Install
+
+Install dependencies from the repository root:
 
 ```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
+yarn install
 ```
 
-## Support
+Some apps also have their own `package.json` and `yarn.lock`. If working inside one app directly, run install from that app folder:
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+```bash
+cd apps/backend
+yarn install
+```
 
-## Stay in touch
+## Development
 
-- Author - Serge Hall
-- Website - [https://sergioartg.com](https://sergioartg.com/)
+Root scripts:
 
-## Respect
-- My first steps work with NodeJS, Express, NestJS, Swagger, MongoDB, PostgreSQL, Microservices, RabbitMQ, WebSocket, DevOps basics (docker + kubernetes + jenkins), SOLID, Hexagonal architecture, SAGA,front-end basics.
-- I am a student of a wonderful team [IT-KAMASUTRA](https://it-incubator.io/en) that give education to the front-end and back-end. These are my first steps in this area and the project is being written from scratch with the knowledge gained here. I highly recommend this team to everyone.
-## License
+```bash
+yarn start:dev.api-gateway
+yarn start:dev.backend
+yarn start:dev.payment-service
+yarn start:dev:frontend
+```
 
-Nest is [MIT licensed](LICENSE).
+Run from app folders when needed:
+
+```bash
+cd apps/api-gateway && yarn start:dev
+cd apps/backend && yarn start:dev
+cd apps/payment-service && yarn start:dev
+cd apps/frontend && yarn start
+```
+
+## Build
+
+```bash
+yarn build
+```
+
+Per-app builds:
+
+```bash
+cd apps/api-gateway && yarn build
+cd apps/backend && yarn build
+cd apps/payment-service && yarn build
+cd apps/frontend && yarn build
+```
+
+## Tests
+
+Available test scripts depend on the app:
+
+```bash
+yarn test:watch
+yarn test:cov
+yarn test:e2e
+```
+
+API gateway also has:
+
+```bash
+cd apps/api-gateway && yarn test
+```
+
+Frontend uses Create React App scripts:
+
+```bash
+cd apps/frontend && yarn test
+```
+
+## Database Migrations
+
+Root/backend-style migration scripts:
+
+```bash
+yarn generate-migrations
+yarn apply-migrations
+yarn revert-last-migrations
+```
+
+## Docker
+
+Build and start all services:
+
+```bash
+docker compose up --build
+```
+
+Service ports:
+
+```text
+api-gateway: 3000
+backend: 3001
+payment-service: 3002
+frontend: 80
+```
+
+## Useful Checks
+
+```bash
+yarn --version
+node --version
+yarn install --immutable
+```
