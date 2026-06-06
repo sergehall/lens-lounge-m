@@ -61,6 +61,13 @@
     "tsconfig-paths": "^4.2.0",
     "typescript": "^5.5.4"
   },
+  "resolutions": {
+    "flatted@npm:^3.2.9": "npm:3.4.2",
+    "form-data@npm:^4.0.0": "npm:4.0.4",
+    "sha.js@npm:^2.4.11": "npm:2.4.12",
+    "tar@npm:^6.1.11": "npm:7.5.11",
+    "tar@npm:^6.2.1": "npm:7.5.11"
+  },
   "jest": {
     "moduleFileExtensions": [
       "js",

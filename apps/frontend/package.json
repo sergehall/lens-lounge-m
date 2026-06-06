@@ -47,5 +47,11 @@
   "devDependencies": {
     "eslint": "^8.0.0",
     "eslint-config-react-app": "^7.0.1"
+  },
+  "resolutions": {
+    "body-parser@npm:1.20.2": "npm:1.20.3",
+    "flatted@npm:^3.2.9": "npm:3.4.2",
+    "tar@npm:^6.1.11": "npm:7.5.11",
+    "tar@npm:^6.2.1": "npm:7.5.11"
   }
 }
